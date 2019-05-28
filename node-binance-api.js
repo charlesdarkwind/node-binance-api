@@ -807,7 +807,7 @@ let api = function Binance() {
 
         /**
         * Gets depth cache for given symbol
-        * @param {symbol} symbol - get depch cache for this symbol
+        * @param {symbol} symbol - get depth cache for this symbol
         * @return {object} - object
         */
         depthCache: function (symbol) {
@@ -816,7 +816,7 @@ let api = function Binance() {
 
         /**
         * Gets depth volume for given symbol
-        * @param {symbol} symbol - get depch volume for this symbol
+        * @param {symbol} symbol - get depth volume for this symbol
         * @return {object} - object
         */
         depthVolume: function (symbol) {
@@ -834,7 +834,7 @@ let api = function Binance() {
         },
 
         /**
-        * rounds number with given step
+        * Rounds number with given step
         * @param {float} qty - quantity to round
         * @param {float} stepSize - stepSize as specified by exchangeInfo
         * @return {float} - number
@@ -849,7 +849,7 @@ let api = function Binance() {
         },
 
         /**
-        * rounds price to required precision
+        * Rounds price to required precision
         * @param {float} price - price to round
         * @param {float} tickSize - tickSize as specified by exchangeInfo
         * @return {float} - number
@@ -2035,7 +2035,7 @@ let api = function Binance() {
                     subscription = subscribeCombined(streams, function (data) {
                         prevDayStreamHandler(data, callback);
                     }, reconnect);
-                    // Raw stream for  a single symbol
+                    // Raw stream for a single symbol
                 } else if (symbols) {
                     let symbol = symbols;
                     subscription = subscribe(symbol.toLowerCase() + '@ticker', function (data) {
